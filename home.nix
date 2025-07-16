@@ -10,7 +10,22 @@
 
   home.packages = [ ];
 
-  home.file = { };
+  home.file = let
+    configDir = "${config.home.homeDirectory}/nixos-config"; # assumed location of configuration repo
+  in
+  {
+    ".bashrc".source = config.lib.file.mkOutOfStoreSymlink
+      "${configDir}/dotfiles/bashrc";
+    ".vimrc".source = config.lib.file.mkOutOfStoreSymlink
+      "${configDir}/dotfiles/vimrc";
+
+    ".config/VSCodium/User/settings.json".source = config.lib.file.mkOutOfStoreSymlink
+      "${configDir}/dotfiles/VSCodium/settings.json";
+
+    # SSH config
+    ".ssh/config".source = config.lib.file.mkOutOfStoreSymlink
+      "${configDir}/dotfiles/ssh/config";
+  };
 
   home.sessionVariables = { };
 
