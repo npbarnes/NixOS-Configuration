@@ -8,6 +8,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./nixstore-disk-usage.nix
   ];
 
   hardware.bluetooth.enable = true; # enables support for Bluetooth
