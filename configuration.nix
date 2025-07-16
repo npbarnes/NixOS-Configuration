@@ -76,7 +76,7 @@
     description = "Nathan Barnes";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      git
+      # Use Home Manager
     ];
   };
 
