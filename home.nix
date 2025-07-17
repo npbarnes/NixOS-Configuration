@@ -29,6 +29,8 @@
 
   home.sessionVariables = { };
 
+  services.ssh-agent.enable = true;
+
   programs.home-manager.enable = true;
 
   programs.vscode = {
