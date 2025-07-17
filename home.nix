@@ -59,7 +59,6 @@
       DisableFirefoxStudies = true;
       DisablePocket = true;
       DisableFirefoxAccounts = true;
-      DisableAccounds = true;
       OverrideFirstRunPage = "";
       OverridePostUpdatePage = "";
       DisplayBookmarksToolbar = "never";
