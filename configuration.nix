@@ -8,11 +8,10 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./bootloader.nix
     ./nixstore-disk-usage.nix
+    ./virtualbox.nix
   ];
-
-  hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   security.sudo = {
     enable = true;
@@ -20,10 +19,6 @@
       Defaults timestamp_timeout=360
     '';
   };
-
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "deck"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
