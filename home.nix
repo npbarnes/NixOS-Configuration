@@ -11,7 +11,7 @@
   home.packages = [ ];
 
   home.file = let
-    configDir = "${config.home.homeDirectory}/nixos-config"; # assumed location of configuration repo
+    configDir = "${config.home.homeDirectory}/NixOS-Configuration"; # assumed location of configuration repo
   in
   {
     ".bashrc".source = config.lib.file.mkOutOfStoreSymlink
