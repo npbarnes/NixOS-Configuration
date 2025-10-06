@@ -11,6 +11,7 @@
   home.packages = [
     pkgs.texlive.combined.scheme-full
     pkgs.texstudio
+    pkgs.julia-bin
   ];
 
   home.file = let

@@ -18,7 +18,6 @@
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.rulers": [92],
   "julia.enableTelemetry": false,
-  "julia.executablePath": "/home/deck/.juliaup/bin/julia",
   "julia.lint.call": false,
   "julia.symbolCacheDownload": true,
   "r.plot.useHttpgd": true,
@@ -34,5 +33,6 @@
   "editor.autoClosingBrackets": "never",
   "debug.toolBarLocation": "docked",
   "terminal.integrated.scrollback": 100000,
-  "explorer.confirmDragAndDrop": false
+  "explorer.confirmDragAndDrop": false,
+  "julia.executablePath": "/etc/profiles/per-user/npbarnes/bin/julia"
 }
