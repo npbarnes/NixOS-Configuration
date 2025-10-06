@@ -8,7 +8,10 @@
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
-  home.packages = [ ];
+  home.packages = [
+    pkgs.texlive.combined.scheme-full
+    pkgs.texstudio
+  ];
 
   home.file = let
     configDir = "${config.home.homeDirectory}/NixOS-Configuration"; # assumed location of configuration repo
