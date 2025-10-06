@@ -12,6 +12,7 @@
     pkgs.texlive.combined.scheme-full
     pkgs.texstudio
     pkgs.julia-bin
+    pkgs.conda # Must run `conda-shell` and `conda-install` on first use.
   ];
 
   home.file = let
@@ -45,6 +46,9 @@
     profiles.default.extensions = [
       pkgs.vscode-marketplace.bbenoist.nix
       pkgs.vscode-marketplace.julialang.language-julia
+    ];
+    profiles.python.extensions = [
+      pkgs.vscode-marketplace.ms-python.python
     ];
   };
 
