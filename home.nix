@@ -12,7 +12,6 @@
     pkgs.texlive.combined.scheme-full
     pkgs.texstudio
     pkgs.julia-bin
-    pkgs.conda # Must run `conda-shell` and `conda-install` on first use.
   ];
 
   home.file = let
