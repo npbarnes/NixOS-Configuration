@@ -12,6 +12,8 @@
     pkgs.texlive.combined.scheme-full
     pkgs.texstudio
     pkgs.julia-bin
+    pkgs.onlyoffice-bin
+    pkgs.ivpn
   ];
 
   home.file = let
