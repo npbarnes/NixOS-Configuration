@@ -8,6 +8,10 @@
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
+  imports = [
+    ./plasma.nix
+  ];
+
   home.packages = [
     pkgs.texlive.combined.scheme-full
     pkgs.texstudio
