@@ -13,7 +13,7 @@
     pkgs.texstudio
     pkgs.julia-bin
     pkgs.onlyoffice-bin
-    pkgs.ivpn
+    pkgs.ivpn-ui # also needs services.ivpn.enable = true; in main NixOS configuration
   ];
 
   home.file = let

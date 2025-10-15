@@ -76,6 +76,9 @@
     #media-session.enable = true;
   };
 
+  # Activate IVPN service. Need to install pkgs.ivpn-ui separately.
+  services.ivpn.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.npbarnes = {
     isNormalUser = true;
