@@ -89,6 +89,11 @@
     ];
   };
 
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -96,6 +101,7 @@
   environment.systemPackages = with pkgs; [
     vim
     wget
+    distrobox
   ];
 
   environment.variables.EDITOR = "vim";
