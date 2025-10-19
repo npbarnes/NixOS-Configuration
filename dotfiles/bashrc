@@ -47,3 +47,27 @@ if [ -f "${SSH_ENV}" ]; then
 else
     start_agent;
 fi
+
+########################################################################
+if [ -z "${CONTAINER_ID+x}" ]; then
+    # If run in a distrobox, then continue, otherwise exit.
+    return
+fi
+########################################################################
+
+### Distrobox stuff below this point:
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/npbarnes/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/npbarnes/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<
