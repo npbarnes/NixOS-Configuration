@@ -125,7 +125,7 @@
               launchers = [
                 "preferred://filemanager"
                 "preferred://browser"
-                "preferred://terminal"
+                "applications:org.kde.konsole.desktop"
                 "applications:codium.desktop"
                 "applications:steam.desktop"
               ];
