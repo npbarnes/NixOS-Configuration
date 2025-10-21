@@ -153,7 +153,7 @@
               ];
             };
           }
-          "org.kde.digitalclock"
+          "org.kde.plasma.digitalclock"
         ]; # end widgets
       }
     ]; # end panels
