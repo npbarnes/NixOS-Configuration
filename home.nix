@@ -138,10 +138,10 @@
 
   programs.git = {
     enable = true;
-    userName = "Nathan Barnes";
-    userEmail = "nathanpaulbarnes@gmail.com";
     ignores = [ "*.swp" ];
-    extraConfig = {
+    settings = {
+      user.name = "Nathan Barnes";
+      user.email = "nathanpaulbarnes@gmail.com";
       column.ui = "auto";
       branch.sort = "-committerdate";
       tag.sort = "version:refname";
