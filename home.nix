@@ -9,7 +9,7 @@
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
   imports = [
-    ./plasma.nix
+    ./modules/home-manager/plasma.nix
   ];
 
   home.packages = [
