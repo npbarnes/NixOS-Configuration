@@ -126,7 +126,7 @@
                 "preferred://filemanager"
                 "preferred://browser"
                 "preferred://terminal"
-                "applications:vscodium.desktop"
+                "applications:codium.desktop"
                 "applications:steam.desktop"
               ];
             };
