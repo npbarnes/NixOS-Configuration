@@ -2,7 +2,7 @@
   programs.plasma = {
     enable = true;
 
-    overrideConfig = true;
+    overrideConfig = false;
 
     workspace = {
       cursor.size = 18;
