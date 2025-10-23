@@ -4,6 +4,11 @@
 
     overrideConfig = false;
 
+    configFile = {
+      "kwinrc"."Windows"."DelayFocusInterval" = 0;
+      "kwinrc"."Windows"."FocusPolicy" = "FocusFollowsMouse";
+    };
+
     workspace = {
       cursor.size = 18;
       enableMiddleClickPaste = true;
