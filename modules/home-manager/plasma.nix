@@ -9,6 +9,8 @@
       "kwinrc"."Windows"."FocusPolicy" = "FocusFollowsMouse";
     };
 
+    windows.allowWindowsToRememberPositions = true;
+
     workspace = {
       cursor.size = 18;
       enableMiddleClickPaste = true;
