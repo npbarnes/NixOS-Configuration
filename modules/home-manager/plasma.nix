@@ -93,6 +93,11 @@
         animation = "off";
         navigationWrapping = false;
       };
+      titlebarButtons.left = [
+        "more-window-actions"
+        "on-all-desktops"
+        "keep-above-windows"
+      ];
     };
 
     kscreenlocker = {
