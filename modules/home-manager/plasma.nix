@@ -8,6 +8,18 @@
       # Focus Follows Mouse (no delay)
       "kwinrc"."Windows"."DelayFocusInterval" = 0;
       "kwinrc"."Windows"."FocusPolicy" = "FocusFollowsMouse";
+
+      # Konsole starts on the left half of the screen
+      "kwinrulesrc"."General"."count" = 1;
+      "kwinrulesrc"."General"."rules" = "a845f3c4-550c-4c2e-a2c3-eccd7141ab5f";
+      "kwinrulesrc"."a845f3c4-550c-4c2e-a2c3-eccd7141ab5f"."Description" = "Application settings for org.kde.konsole";
+      "kwinrulesrc"."a845f3c4-550c-4c2e-a2c3-eccd7141ab5f"."position" = "1113,0";
+      "kwinrulesrc"."a845f3c4-550c-4c2e-a2c3-eccd7141ab5f"."positionrule" = 3;
+      "kwinrulesrc"."a845f3c4-550c-4c2e-a2c3-eccd7141ab5f"."size" = "1113,1208";
+      "kwinrulesrc"."a845f3c4-550c-4c2e-a2c3-eccd7141ab5f"."sizerule" = 3;
+      "kwinrulesrc"."a845f3c4-550c-4c2e-a2c3-eccd7141ab5f"."wmclass" = "konsole org.kde.konsole";
+      "kwinrulesrc"."a845f3c4-550c-4c2e-a2c3-eccd7141ab5f"."wmclasscomplete" = true;
+      "kwinrulesrc"."a845f3c4-550c-4c2e-a2c3-eccd7141ab5f"."wmclassmatch" = 1;
     };
 
     windows.allowWindowsToRememberPositions = true;
