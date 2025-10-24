@@ -5,6 +5,7 @@
     overrideConfig = false;
 
     configFile = {
+      # Focus Follows Mouse (no delay)
       "kwinrc"."Windows"."DelayFocusInterval" = 0;
       "kwinrc"."Windows"."FocusPolicy" = "FocusFollowsMouse";
     };
