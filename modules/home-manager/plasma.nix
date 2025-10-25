@@ -9,6 +9,9 @@
       "kwinrc"."Windows"."DelayFocusInterval" = 0;
       "kwinrc"."Windows"."FocusPolicy" = "FocusFollowsMouse";
 
+      # Disable 'Overview' action when pressing the mouse into the upper left corner
+      "kwinrc"."Effect-overview"."BorderActivate" = 9;
+
       # Konsole starts on the left half of the screen
       "kwinrulesrc"."General"."count" = 1;
       "kwinrulesrc"."General"."rules" = "a845f3c4-550c-4c2e-a2c3-eccd7141ab5f";
