@@ -34,5 +34,6 @@
   "debug.toolBarLocation": "docked",
   "terminal.integrated.scrollback": 100000,
   "explorer.confirmDragAndDrop": false,
-  "julia.executablePath": "/etc/profiles/per-user/npbarnes/bin/julia"
+  "julia.executablePath": "/etc/profiles/per-user/npbarnes/bin/julia",
+  "notebook.output.scrolling": true
 }
