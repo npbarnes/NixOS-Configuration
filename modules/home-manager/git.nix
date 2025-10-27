@@ -1,7 +1,10 @@
 {
   programs.git = {
     enable = true;
-    ignores = [ "*.swp" ];
+    ignores = [
+      "__pycache__"
+      "*.swp"
+    ];
     settings = {
       user.name = "Nathan Barnes";
       user.email = "nathanpaulbarnes@gmail.com";
