@@ -15,6 +15,7 @@
     ./modules/nixos/plasma.nix
     ./modules/nixos/vpn.nix
     ./modules/nixos/distrobox.nix
+    ./modules/nixos/gnomeboxes.nix
     ./modules/nixos/steam.nix
     ./modules/nixos/nixstore-disk-usage.nix
   ];
