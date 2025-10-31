@@ -23,6 +23,10 @@
       "kwinrulesrc"."a845f3c4-550c-4c2e-a2c3-eccd7141ab5f"."wmclass" = "konsole org.kde.konsole";
       "kwinrulesrc"."a845f3c4-550c-4c2e-a2c3-eccd7141ab5f"."wmclasscomplete" = true;
       "kwinrulesrc"."a845f3c4-550c-4c2e-a2c3-eccd7141ab5f"."wmclassmatch" = 1;
+
+      # No notifications when the network connection changes state successfully
+      "networkmanagement.notifyrc"."Event/ConnectionActivated"."Action" = "";
+      "networkmanagement.notifyrc"."Event/ConnectionDeactivated"."Action" = "";
     };
 
     windows.allowWindowsToRememberPositions = true;
