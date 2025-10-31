@@ -22,6 +22,7 @@
     pkgs.onlyoffice-bin
     pkgs.ivpn-ui # also needs services.ivpn.enable = true; in main NixOS configuration
     pkgs.heroic
+    pkgs.brave
   ];
 
   home.file = let
