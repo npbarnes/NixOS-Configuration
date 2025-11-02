@@ -48,6 +48,9 @@ else
     start_agent;
 fi
 
+# Direnv hook
+eval "$(direnv hook bash)"
+
 ########################################################################
 if [ -z "${CONTAINER_ID+x}" ]; then
     # If run in a distrobox, then continue, otherwise exit.

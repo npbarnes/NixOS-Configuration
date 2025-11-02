@@ -13,6 +13,7 @@
     ./modules/home-manager/firefox.nix
     ./modules/home-manager/git.nix
     ./modules/home-manager/vscode.nix
+    ./modules/home-manager/direnv.nix
   ];
 
   home.packages = [
