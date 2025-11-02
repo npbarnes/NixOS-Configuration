@@ -4,6 +4,8 @@
     ignores = [
       "__pycache__"
       "*.swp"
+      ".direnv"
+      ".envrc"
     ];
     settings = {
       user.name = "Nathan Barnes";
