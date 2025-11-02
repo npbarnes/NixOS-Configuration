@@ -10,6 +10,7 @@
     ];
     profiles.python.extensions = [
       pkgs.vscode-marketplace.ms-python.python
+      pkgs.vscode-marketplace.mkhl.direnv
     ];
   };
 }
