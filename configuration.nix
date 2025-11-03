@@ -39,6 +39,7 @@
   environment.systemPackages = with pkgs; [
     vim
     wget
+    htop
   ];
 
   environment.variables.EDITOR = "vim";
