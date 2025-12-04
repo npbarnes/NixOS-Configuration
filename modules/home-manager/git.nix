@@ -16,7 +16,7 @@
       init.defaultBranch = "main";
       diff = {
         algorithm = "histogram";
-        colorMoved = "plain";
+        colorMoved = "zebra";
         mnemonicPrefix = true;
         renames = true;
       };
@@ -25,6 +25,7 @@
         autoSetupRemote = true;
         followTags = true;
       };
+      pull.rebase = true;
       fetch = {
         prune = true;
         pruneTags = true;
