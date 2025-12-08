@@ -36,5 +36,6 @@
   "explorer.confirmDragAndDrop": false,
   "julia.executablePath": "~/.local/bin/julia",
   "notebook.output.scrolling": true,
-  "terminal.integrated.stickyScroll.enabled": false
+  "terminal.integrated.stickyScroll.enabled": false,
+  "julia.juliaup.install.hint": false
 }
