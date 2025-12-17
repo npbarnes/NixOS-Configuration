@@ -158,7 +158,6 @@
                 "preferred://filemanager"
                 "preferred://browser"
                 "applications:org.kde.konsole.desktop"
-                "applications:codium.desktop"
                 "applications:steam.desktop"
               ];
             };
