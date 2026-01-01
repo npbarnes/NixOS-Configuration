@@ -61,6 +61,10 @@ if [ -z "${CONTAINER_ID+x}" ]; then
     return
 fi
 ## Distrobox options
+txtgrn='\e[1;32m' # Green
+txtrst='\e[0m'    # Text Reset
+
+export PS1="📦$txtgrn[\u@$CONTAINER_ID:\W]\$ $txtrst"
 
 # >>> juliaup initialize >>>
 
