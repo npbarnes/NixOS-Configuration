@@ -159,6 +159,7 @@
                 "preferred://browser"
                 "applications:org.kde.konsole.desktop"
                 "applications:steam.desktop"
+                "applications:fedorabox-codium.desktop" # I manually export vscode from a distrobox called 'fedorabox'
               ];
             };
           }
