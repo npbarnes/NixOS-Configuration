@@ -37,5 +37,7 @@
   "julia.executablePath": "~/.local/bin/julia",
   "notebook.output.scrolling": true,
   "terminal.integrated.stickyScroll.enabled": false,
-  "julia.juliaup.install.hint": false
+  "julia.juliaup.install.hint": false,
+  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+  "julia.enableCrashReporter": true
 }
