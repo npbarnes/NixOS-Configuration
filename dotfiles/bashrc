@@ -17,7 +17,7 @@ HISTCONTROL=ignoreboth
 # Show files after changing directory.
 cdls() {
     builtin cd "$@"
-    ls
+    ls --color=auto
 }
 alias cd='cdls'
 
@@ -61,6 +61,8 @@ if [ -z "${CONTAINER_ID+x}" ]; then
     return
 fi
 ## Distrobox options
+alias ls="ls --color=auto"
+
 txtgrn='\e[1;32m' # Green
 txtrst='\e[0m'    # Text Reset
 
