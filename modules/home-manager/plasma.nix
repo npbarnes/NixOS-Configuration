@@ -27,6 +27,9 @@
       # No notifications when the network connection changes state successfully
       "networkmanagement.notifyrc"."Event/ConnectionActivated"."Action" = "";
       "networkmanagement.notifyrc"."Event/ConnectionDeactivated"."Action" = "";
+
+      # Dolphin starts in the home folder
+      "dolphinrc"."General"."RememberOpenedTabs" = false;
     };
 
     windows.allowWindowsToRememberPositions = true;
