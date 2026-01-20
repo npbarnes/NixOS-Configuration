@@ -39,5 +39,19 @@
   "terminal.integrated.stickyScroll.enabled": false,
   "julia.juliaup.install.hint": false,
   "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
-  "julia.enableCrashReporter": true
+  "julia.enableCrashReporter": true,
+  "cSpell.userWords": [
+    "codomain",
+    "docstrings",
+    "extremal",
+    "Kronrod",
+    "Marsaglia",
+    "Mersenne",
+    "Tsang",
+    "unimodal",
+    "Xoshiro"
+  ],
+  "cSpell.enabledFileTypes": {
+    "*": false
+  }
 }
