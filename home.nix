@@ -23,7 +23,6 @@
     pkgs.ivpn-ui # also needs services.ivpn.enable = true; in main NixOS configuration
     pkgs.heroic
     pkgs.brave
-    pkgs.jetbrains.pycharm
   ];
 
   home.file = let
