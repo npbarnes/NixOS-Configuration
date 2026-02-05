@@ -17,7 +17,7 @@
     ./modules/nixos/distrobox.nix
     ./modules/nixos/gnomeboxes.nix
     ./modules/nixos/steam.nix
-    ./modules/nixos/nixstore-disk-usage.nix
+    ./modules/nixos/nh-clean.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
