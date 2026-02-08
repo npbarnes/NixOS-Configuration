@@ -1,4 +1,6 @@
-{
-  # Activate IVPN service. Need to install pkgs.ivpn-ui separately.
+{pkgs, ...} : {
+  # Activate IVPN service and install desktop UI.
   services.ivpn.enable = true;
+
+  environment.systemPackages = [ pkgs.ivpn-ui ];
 }
