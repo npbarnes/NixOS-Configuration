@@ -18,6 +18,7 @@
     ./modules/nixos/gnomeboxes.nix
     ./modules/nixos/steam.nix
     ./modules/nixos/nh-clean.nix
+    ./modules/nixos/nix-ld.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
