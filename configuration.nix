@@ -5,7 +5,6 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./hardware-configuration.nix
     ./modules/nixos/systemd.nix
     ./modules/nixos/bluetooth.nix
     ./modules/nixos/sound.nix
@@ -25,7 +24,6 @@
   nixpkgs.config.allowUnfree = true;
 
   networking.networkmanager.enable = true;
-  networking.hostName = "deck";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.npbarnes = {

@@ -16,20 +16,36 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: {
-    nixosConfigurations.deck = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ./configuration.nix
-
-        home-manager.nixosModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = "backup";
-          home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
-          home-manager.users.npbarnes = import ./home.nix;
-        }
-      ];
+  outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: let
+    my-home-manager-config = {
+      home-manager.useGlobalPkgs = true;
+      home-manager.useUserPackages = true;
+      home-manager.backupFileExtension = "backup";
+      home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
+      home-manager.users.npbarnes = import ./home.nix;
+    };
+  in {
+    nixosConfigurations = {
+      deck = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./deck-hardware-configuration.nix
+          ./configuration.nix
+          ({networking.hostName = "deck";})
+          home-manager.nixosModules.home-manager
+          my-home-manager-config
+        ];
+      };
+      surface = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./surface-hardware-configuration.nix
+          ./configuration.nix
+          ({networking.hostName = "surface";})
+          home-manager.nixosModules.home-manager
+          my-home-manager-config
+        ];
+      };
     };
   };
 }
