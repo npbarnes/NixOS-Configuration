@@ -23,6 +23,7 @@
     pkgs.heroic
     pkgs.brave
     pkgs.qdirstat
+    pkgs.kdePackages.kamoso
   ];
 
   home.file = let
