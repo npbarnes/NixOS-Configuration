@@ -32,6 +32,11 @@
           ./deck-hardware-configuration.nix
           ./configuration.nix
           ({networking.hostName = "deck";})
+          ({
+            # Do not change without reading the docs
+            # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+            system.stateVersion = "25.05"; # Did you read the comment?
+          })
           home-manager.nixosModules.home-manager
           my-home-manager-config
         ];
@@ -42,6 +47,11 @@
           ./surface-hardware-configuration.nix
           ./configuration.nix
           ({networking.hostName = "surface";})
+          ({
+            # Do not change without reading the docs
+            # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+            system.stateVersion = "25.11"; # Did you read the comment?
+          })
           home-manager.nixosModules.home-manager
           my-home-manager-config
         ];
