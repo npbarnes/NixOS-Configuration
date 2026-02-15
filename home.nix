@@ -24,6 +24,8 @@
     pkgs.brave
     pkgs.qdirstat
     pkgs.kdePackages.kamoso
+    pkgs.kdePackages.dragon
+    pkgs.vlc
   ];
 
   home.file = let
