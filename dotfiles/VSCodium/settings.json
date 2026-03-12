@@ -52,4 +52,5 @@
     "unimodal",
     "Xoshiro"
   ],
+  "terminal.integrated.initialHint": false
 }
