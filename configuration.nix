@@ -19,6 +19,7 @@
     ./modules/nixos/nh-clean.nix
     ./modules/nixos/nix-ld.nix
     ./modules/nixos/kdeconnect.nix
+    ./modules/nixos/appimage.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
