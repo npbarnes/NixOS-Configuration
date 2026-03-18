@@ -44,6 +44,10 @@
     # SSH config
     ".ssh/config".source = config.lib.file.mkOutOfStoreSymlink
       "${configDir}/dotfiles/ssh/config";
+
+    # Dolphin config
+    ".local/share/kxmlgui5/dolphin/dolphinui.rc".source = config.lib.file.mkOutOfStoreSymlink
+      "${configDir}/dotfiles/local/share/kxmlgui5/dolphin/dolphinui.rc";
   };
 
   home.sessionVariables = { };
