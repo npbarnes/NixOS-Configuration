@@ -27,6 +27,7 @@
     pkgs.kdePackages.kamoso
     pkgs.kdePackages.dragon
     pkgs.vlc
+    pkgs.qbittorrent
   ];
 
   home.file = let
