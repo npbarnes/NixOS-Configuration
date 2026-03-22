@@ -20,7 +20,7 @@
     ./modules/nixos/nix-ld.nix
     ./modules/nixos/kdeconnect.nix
     ./modules/nixos/appimage.nix
-    ./modules/nixos/transmission.nix
+    ./modules/nixos/torrents.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
