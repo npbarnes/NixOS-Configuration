@@ -14,10 +14,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, plasma-manager, nix-vscode-extensions, ... }@inputs: let
     my-home-manager-config = {
+      nixpkgs.overlays = [ nix-vscode-extensions.overlays.default ];
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.backupFileExtension = "backup";
