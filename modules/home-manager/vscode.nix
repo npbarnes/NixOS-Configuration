@@ -5,7 +5,7 @@
     profiles.default.enableUpdateCheck = true;
     profiles.default.enableExtensionUpdateCheck = true;
     profiles.default.extensions = [
-      pkgs.vscode-marketplace.bbenoist.nix
+      pkgs.vscode-marketplace.jnoortheen.nix-ide
       pkgs.vscode-marketplace.julialang.language-julia
     ];
     profiles.python.extensions = [
@@ -13,4 +13,9 @@
       pkgs.vscode-marketplace.mkhl.direnv
     ];
   };
+
+  home.packages = [
+    pkgs.nixfmt
+    pkgs.nixfmt-tree
+  ];
 }

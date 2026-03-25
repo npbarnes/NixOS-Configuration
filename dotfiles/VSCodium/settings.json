@@ -52,5 +52,6 @@
     "unimodal",
     "Xoshiro"
   ],
-  "terminal.integrated.initialHint": false
+  "terminal.integrated.initialHint": false,
+  "nix.formatterPath": "nixfmt"
 }
