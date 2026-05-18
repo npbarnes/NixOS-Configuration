@@ -1,6 +1,7 @@
 {pkgs, ...} : {
-  programs.vscodium = {
+  programs.vscode = {
     enable = true;
+    package = pkgs.vscodium;
     profiles.default.enableUpdateCheck = true;
     profiles.default.enableExtensionUpdateCheck = true;
     profiles.default.extensions = [
