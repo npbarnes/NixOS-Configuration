@@ -16,7 +16,7 @@
   "editor.stickyScroll.enabled": false,
   "editor.suggest.showTypeParameters": false,
   "editor.unicodeHighlight.ambiguousCharacters": false,
-  "editor.rulers": [92],
+  "editor.rulers": [120],
   "julia.enableTelemetry": false,
   "julia.lint.call": false,
   "julia.symbolCacheDownload": true,
@@ -53,5 +53,6 @@
     "Xoshiro"
   ],
   "terminal.integrated.initialHint": false,
-  "nix.formatterPath": "nixfmt"
+  "nix.formatterPath": "nixfmt",
+  "rewrap.wholeComment": false
 }
