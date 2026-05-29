@@ -21,6 +21,7 @@
     ./modules/nixos/kdeconnect.nix
     ./modules/nixos/appimage.nix
     ./modules/nixos/torrents.nix
+    ./modules/nixos/easyeffects.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
