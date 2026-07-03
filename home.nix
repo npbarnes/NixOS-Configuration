@@ -29,6 +29,8 @@
     pkgs.kdePackages.dragon
     pkgs.vlc
     pkgs.qbittorrent
+    pkgs.typst
+    pkgs.typstwriter
   ];
 
   home.file = let
