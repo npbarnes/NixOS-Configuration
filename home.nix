@@ -31,6 +31,7 @@
     pkgs.qbittorrent
     pkgs.typst
     pkgs.typstwriter
+    pkgs.discord
   ];
 
   home.file = let
