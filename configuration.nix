@@ -22,6 +22,7 @@
     ./modules/nixos/appimage.nix
     ./modules/nixos/torrents.nix
     ./modules/nixos/easyeffects.nix
+    ./modules/nixos/cameras.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
