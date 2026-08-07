@@ -4,6 +4,7 @@
     ./hardware-configuration.nix
 
     ./plasma-desktop.nix
+    ./cameras.nix
     ./kdeconnect.nix
     ./easyeffects.nix
   ];

@@ -20,7 +20,6 @@
     ./common-modules/nixos/nix-ld.nix
     ./common-modules/nixos/appimage.nix
     ./common-modules/nixos/torrents.nix
-    ./common-modules/nixos/cameras.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
