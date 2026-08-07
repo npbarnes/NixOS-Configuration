@@ -21,46 +21,12 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, plasma-manager, nix-vscode-extensions, ... }@inputs: let
-    my-home-manager-config = {
-      nixpkgs.overlays = [ nix-vscode-extensions.overlays.default ];
-      home-manager.useGlobalPkgs = true;
-      home-manager.useUserPackages = true;
-      home-manager.backupFileExtension = "backup";
-      home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
-      home-manager.users.npbarnes = import ./home.nix;
-    };
-  in {
+  outputs = inputs: {
     nixosConfigurations = {
-      deck = nixpkgs.lib.nixosSystem {
+      deck = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [
-          ./deck-hardware-configuration.nix
-          ./configuration.nix
-          ({networking.hostName = "deck";})
-          ({
-            # Do not change without reading the docs
-            # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-            system.stateVersion = "25.05"; # Did you read the comment?
-          })
-          home-manager.nixosModules.home-manager
-          my-home-manager-config
-        ];
-      };
-      surface = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./surface-hardware-configuration.nix
-          ./configuration.nix
-          ({networking.hostName = "surface";})
-          ({
-            # Do not change without reading the docs
-            # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-            system.stateVersion = "25.11"; # Did you read the comment?
-          })
-          home-manager.nixosModules.home-manager
-          my-home-manager-config
-        ];
+        specialArgs = { inherit inputs; };
+        modules = [ ./hosts/deck ];
       };
     };
   };
