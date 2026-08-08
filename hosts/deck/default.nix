@@ -1,17 +1,14 @@
-{ inputs, ... } : {
+{ lib, inputs, ... } : {
   imports = [
-    ../../common-configuration.nix
     ./hardware-configuration.nix
-
-    ./plasma-desktop.nix
-    ./cameras.nix
-    ./kdeconnect.nix
-    ./easyeffects.nix
-  ];
-
-  home-manager.sharedModules = [ inputs.plasma-manager.homeModules.plasma-manager ];
-  home-manager.users.npbarnes = import ./home.nix;
+    ../../common-configuration.nix
+  ]
+  ++ (lib.filesystem.listFilesRecursive ./modules/nixos)
+  ++ [{
+    home-manager.users.npbarnes.imports = lib.filesystem.listFilesRecursive ./modules/home-manager;
+  }];
 
   networking.hostName = "deck";
   system.stateVersion = "25.05";
+  home-manager.users.npbarnes.home.stateVersion = "24.11";
 }

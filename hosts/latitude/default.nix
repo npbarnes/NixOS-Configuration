@@ -1,18 +1,15 @@
-{ inputs, ... } : {
+{ lib, inputs, ... } : {
   imports = [
-    ../../common-configuration.nix
     ./hardware-configuration.nix
-    ./gnome-desktop.nix
-  ];
-
-  home-manager.users.npbarnes = import ./home.nix;
-
-  networking.firewall = {
-    # GSConnect needs ports 1714 - 1764 open
-    allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
-    allowedUDPPortRanges = [ { from = 1714; to = 1764; } ];
-  };
+    ../../common-configuration.nix
+  ]
+  ++ (lib.filesystem.listFilesRecursive ./modules/nixos)
+  ++ [{
+    home-manager.users.npbarnes.imports = lib.filesystem.listFilesRecursive ./modules/home-manager;
+  }];
 
   networking.hostName = "latitude";
+
   system.stateVersion = "26.05";
+  home-manager.users.npbarnes.home.stateVersion = "26.05";
 }

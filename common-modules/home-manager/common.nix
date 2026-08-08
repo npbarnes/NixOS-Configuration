@@ -3,14 +3,6 @@
   home.username = "npbarnes";
   home.homeDirectory = "/home/npbarnes";
 
-  imports = [
-    ./common-modules/home-manager/firefox.nix
-    ./common-modules/home-manager/git.nix
-    ./common-modules/home-manager/vscode.nix
-    ./common-modules/home-manager/direnv.nix
-    ./common-modules/home-manager/spell-check.nix
-  ];
-
   home.packages = [
     pkgs.texlive.combined.scheme-full
     pkgs.texstudio

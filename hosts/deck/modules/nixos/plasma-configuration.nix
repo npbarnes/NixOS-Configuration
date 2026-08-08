@@ -1,5 +1,8 @@
+{ inputs, ... } :
 {
-  programs.plasma = {
+  home-manager.sharedModules = [ inputs.plasma-manager.homeModules.plasma-manager ];
+
+  home-manager.users.npbarnes.programs.plasma = {
     enable = true;
 
     overrideConfig = false;

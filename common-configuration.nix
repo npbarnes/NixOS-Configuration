@@ -1,30 +1,15 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, inputs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 {
-  imports = [
-    inputs.home-manager.nixosModules.home-manager
-    ./common-modules/nixos/systemd.nix
-    ./common-modules/nixos/bluetooth.nix
-    ./common-modules/nixos/sound.nix
-    ./common-modules/nixos/locale.nix
-    ./common-modules/nixos/printing.nix
-    ./common-modules/nixos/sudo.nix
-    ./common-modules/nixos/vpn.nix
-    ./common-modules/nixos/distrobox.nix
-    ./common-modules/nixos/gnomeboxes.nix
-    ./common-modules/nixos/steam.nix
-    ./common-modules/nixos/nh-clean.nix
-    ./common-modules/nixos/nix-ld.nix
-    ./common-modules/nixos/appimage.nix
-    ./common-modules/nixos/torrents.nix
-  ];
+  imports =
+    [ inputs.home-manager.nixosModules.home-manager ] ++
+    (lib.filesystem.listFilesRecursive ./common-modules/nixos) ++
+    [{
+      home-manager.users.npbarnes.imports = lib.filesystem.listFilesRecursive ./common-modules/home-manager;
+    }];
+
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.overlays = [ inputs.nix-vscode-extensions.overlays.default ];
 
   networking.networkmanager.enable = true;
 
