@@ -36,10 +36,7 @@
       latitude = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
-        modules = [
-          inputs.nix-hardware.nixosModules.dell-latitude-7430
-          ./hosts/latitude
-        ];
+        modules = [ ./hosts/latitude ];
       };
     };
   };

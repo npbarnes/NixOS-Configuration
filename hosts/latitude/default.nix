@@ -1,6 +1,7 @@
 { lib, inputs, ... } : {
   imports = [
     ./hardware-configuration.nix
+    inputs.nix-hardware.nixosModules.dell-latitude-7430
     ../../common-configuration.nix
   ]
   ++ (lib.filesystem.listFilesRecursive ./modules/nixos)
