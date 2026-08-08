@@ -33,6 +33,9 @@
     vim
     wget
     htop
+    tree
+    curl
+    git
   ];
 
   environment.variables.EDITOR = "vim";
