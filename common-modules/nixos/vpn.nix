@@ -18,7 +18,7 @@
     };
 
     script = ''
-      ivpn connect -any
+      ivpn connect -any -city chicago
     '';
   };
 }
