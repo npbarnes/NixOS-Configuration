@@ -2,11 +2,14 @@
 {
   imports =
     [ inputs.home-manager.nixosModules.home-manager ] ++
-    (lib.filesystem.listFilesRecursive ./common-modules/nixos) ++
+    (lib.filesystem.listFilesRecursive ./modules/nixos) ++
     [{
-      home-manager.users.npbarnes.imports = lib.filesystem.listFilesRecursive ./common-modules/home-manager;
+      home-manager.users.npbarnes.imports = lib.filesystem.listFilesRecursive ./modules/home-manager
+      ++ [
+        ./home-utils.nix
+        ({ myUtils, ... } : { home.file = myUtils.dirToHomeFileAttrOutOfStore ./dotfiles; })
+      ];
     }];
-
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
@@ -26,6 +29,7 @@
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.backupFileExtension = "backup";
+  home-manager.extraSpecialArgs = { inherit inputs; }; # Required for home-utils.nix
 
   services.flatpak.enable = true;
 
