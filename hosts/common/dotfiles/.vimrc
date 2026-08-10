@@ -118,6 +118,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'npbarnes/bufpos'
 Plug 'LnL7/vim-nix'
+Plug 'vim-autoformat/vim-autoformat'
 call plug#end()
 
 " Configure plugins here:
@@ -152,4 +153,6 @@ nnoremap <Leader>9 :call BufPos_ActivateBuffer(9)<CR>
 nnoremap <Leader>0 :call BufPos_ActivateBuffer(10)<CR>
 
 autocmd FileType gitcommit autocmd! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
+
+au BufWrite * :Autoformat
 
