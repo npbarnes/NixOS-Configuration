@@ -54,23 +54,27 @@
       };
       SearchSuggestEnabled = true;
       ExtensionSettings = {
-        "uBlock0@raymondhill.net" = { # uBlock Origin
+        "uBlock0@raymondhill.net" = {
+          # uBlock Origin
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
           installation_mode = "normal_installed";
           default_area = "navbar";
           private_browsing = true;
         };
-        "jetpack-extension@dashlane.com" = { # Dashlane
+        "jetpack-extension@dashlane.com" = {
+          # Dashlane
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/dashlane/latest.xpi";
           installation_mode = "normal_installed";
           default_area = "navbar";
           private_browsing = true;
         };
-        "{2662ff67-b302-4363-95f3-b050218bd72c}" = { # Untrap for Youtube
+        "{2662ff67-b302-4363-95f3-b050218bd72c}" = {
+          # Untrap for Youtube
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/untrap-for-youtube/latest.xpi";
           installation_mode = "normal_installed";
         };
-        "{eceab40b-230a-4560-98ed-185ad010633f}" = { # NixOS Packages Search Engine
+        "{eceab40b-230a-4560-98ed-185ad010633f}" = {
+          # NixOS Packages Search Engine
           install_url = "https://addons.mozilla.org/firefox/downloads/file/4160440/nixos_packages_search_engine-1.0.xpi";
           installation_mode = "normal_installed";
         };

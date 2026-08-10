@@ -1,4 +1,4 @@
-{pkgs, ...} : {
+{ pkgs, ... }: {
   services.qbittorrent = {
     enable = true;
     serverConfig.BitTorrent.Session = {

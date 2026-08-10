@@ -1,4 +1,4 @@
-{ pkgs, ... } :
+{ pkgs, ... }:
 let
   extensionsList = [
     pkgs.gnomeExtensions.power-off-options
@@ -11,4 +11,3 @@ in
 
   my.gnome.extensions = map (ext: ext.extensionUuid) extensionsList;
 }
-

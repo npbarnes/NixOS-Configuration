@@ -1,9 +1,15 @@
-{ config, lib, inputs, ... }:
+{
+  config,
+  lib,
+  inputs,
+  ...
+}:
 let
   configDir = "${config.home.homeDirectory}/NixOS-Configuration"; # Assumed location of the flake
 
   _dirToHomeFile =
-    modifier: dotfilesStorePath: let
+    modifier: dotfilesStorePath:
+    let
       # Relative path of the dotfiles directory from the flake root
       dotfilesRelDir = lib.removePrefix "${toString inputs.self}/" (toString dotfilesStorePath);
     in

@@ -1,5 +1,5 @@
 # Adds spell checking and dictionaries that are used by many text editors.
-{pkgs, ...} : {
+{ pkgs, ... }: {
   home.packages = [
     pkgs.hunspell
     pkgs.hunspellDicts.en_US-large

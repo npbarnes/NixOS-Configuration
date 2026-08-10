@@ -1,17 +1,28 @@
-{ config, lib, pkgs, inputs, ... }:
 {
-  imports =
-    [ inputs.home-manager.nixosModules.home-manager ] ++
-    (lib.filesystem.listFilesRecursive ./modules/nixos) ++
-    [{
-      home-manager.users.npbarnes.imports = lib.filesystem.listFilesRecursive ./modules/home-manager
-      ++ [
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}:
+{
+  imports = [
+    inputs.home-manager.nixosModules.home-manager
+  ]
+  ++ (lib.filesystem.listFilesRecursive ./modules/nixos)
+  ++ [
+    {
+      home-manager.users.npbarnes.imports = lib.filesystem.listFilesRecursive ./modules/home-manager ++ [
         ./home-utils.nix
-        ({ myUtils, ... } : { home.file = myUtils.dirToHomeFileAttrOutOfStore ./dotfiles; })
+        ({ myUtils, ... }: { home.file = myUtils.dirToHomeFileAttrOutOfStore ./dotfiles; })
       ];
-    }];
+    }
+  ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nixpkgs.config.allowUnfree = true;
 
   networking.networkmanager.enable = true;
@@ -20,7 +31,10 @@
   users.users.npbarnes = {
     isNormalUser = true;
     description = "Nathan Barnes";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
       # Use Home Manager
     ];
@@ -46,4 +60,3 @@
 
   environment.variables.EDITOR = "vim";
 }
-

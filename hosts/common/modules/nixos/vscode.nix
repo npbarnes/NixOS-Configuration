@@ -1,4 +1,4 @@
-{pkgs, inputs, ...} : {
+{ pkgs, inputs, ... }: {
   nixpkgs.overlays = [ inputs.nix-vscode-extensions.overlays.default ];
 
   home-manager.users.npbarnes = {

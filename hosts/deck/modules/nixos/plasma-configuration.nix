@@ -1,4 +1,4 @@
-{ inputs, ... } :
+{ inputs, ... }:
 {
   home-manager.sharedModules = [ inputs.plasma-manager.homeModules.plasma-manager ];
 
@@ -18,7 +18,8 @@
       # Konsole starts on the right half of the screen
       "kwinrulesrc"."General"."count" = 1;
       "kwinrulesrc"."General"."rules" = "a845f3c4-550c-4c2e-a2c3-eccd7141ab5f";
-      "kwinrulesrc"."a845f3c4-550c-4c2e-a2c3-eccd7141ab5f"."Description" = "Application settings for org.kde.konsole";
+      "kwinrulesrc"."a845f3c4-550c-4c2e-a2c3-eccd7141ab5f"."Description" =
+        "Application settings for org.kde.konsole";
       "kwinrulesrc"."a845f3c4-550c-4c2e-a2c3-eccd7141ab5f"."position" = "1455,0";
       "kwinrulesrc"."a845f3c4-550c-4c2e-a2c3-eccd7141ab5f"."positionrule" = 3;
       "kwinrulesrc"."a845f3c4-550c-4c2e-a2c3-eccd7141ab5f"."size" = "1105,1396";
@@ -49,25 +50,25 @@
         displayBrightness = 100;
         powerButtonAction = "sleep";
         powerProfile = "performance";
-        turnOffDisplay.idleTimeout = 60*60; # One hour in seconds
-        turnOffDisplay.idleTimeoutWhenLocked = 60*5; # five minutes
+        turnOffDisplay.idleTimeout = 60 * 60; # One hour in seconds
+        turnOffDisplay.idleTimeoutWhenLocked = 60 * 5; # five minutes
         whenSleepingEnter = "standbyThenHibernate";
       };
 
       battery = {
         autoSuspend = {
           action = "sleep";
-          idleTimeout = 60*30;
+          idleTimeout = 60 * 30;
         };
         dimDisplay = {
           enable = true;
-          idleTimeout = 60*5; # five minutes
+          idleTimeout = 60 * 5; # five minutes
         };
         displayBrightness = 90;
         powerButtonAction = "sleep";
         powerProfile = "balanced";
-        turnOffDisplay.idleTimeout = 60*15; # fifteen minutes
-        turnOffDisplay.idleTimeoutWhenLocked = 60*6; # six minutes
+        turnOffDisplay.idleTimeout = 60 * 15; # fifteen minutes
+        turnOffDisplay.idleTimeoutWhenLocked = 60 * 6; # six minutes
         whenSleepingEnter = "standbyThenHibernate";
       };
 
@@ -82,7 +83,7 @@
       lowBattery = {
         autoSuspend = {
           action = "hibernate";
-          idleTimeout = 60*15; # fifteen minutes
+          idleTimeout = 60 * 15; # fifteen minutes
         };
         dimDisplay = {
           enable = true;
@@ -91,8 +92,8 @@
         displayBrightness = 70;
         powerButtonAction = "sleep";
         powerProfile = "powerSaving";
-        turnOffDisplay.idleTimeout = 60*5; # five minutes
-        turnOffDisplay.idleTimeoutWhenLocked = 60*2; # two minutes
+        turnOffDisplay.idleTimeout = 60 * 5; # five minutes
+        turnOffDisplay.idleTimeoutWhenLocked = 60 * 2; # two minutes
         whenSleepingEnter = "standbyThenHibernate";
       };
     };

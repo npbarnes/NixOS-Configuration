@@ -1,13 +1,15 @@
-{ lib, inputs, ... } : {
+{ lib, inputs, ... }: {
   imports = [
     ./hardware-configuration.nix
     inputs.nix-hardware.nixosModules.dell-latitude-7430
     ../common
   ]
   ++ (lib.filesystem.listFilesRecursive ./modules/nixos)
-  ++ [{
-    home-manager.users.npbarnes.imports = lib.filesystem.listFilesRecursive ./modules/home-manager;
-  }];
+  ++ [
+    {
+      home-manager.users.npbarnes.imports = lib.filesystem.listFilesRecursive ./modules/home-manager;
+    }
+  ];
 
   networking.hostName = "latitude";
 
