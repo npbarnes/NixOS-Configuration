@@ -5,7 +5,7 @@
   };
 
   home-manager.users.npbarnes = {
-    my.gnome.extensions = [
+    my.gnome.extensionIds = [
       pkgs.gnomeExtensions.gsconnect.extensionUuid
     ];
   };
