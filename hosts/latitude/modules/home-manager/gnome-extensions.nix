@@ -5,4 +5,12 @@
     pkgs.gnomeExtensions.appindicator
     pkgs.gnomeExtensions.caffeine
   ];
+
+  dconf.settings = {
+    "org/gnome/shell/power-off-options" = {
+      show-hibernate = true;
+      show-suspend-then-hibernate = true;
+      show-hybrid-sleep = true;
+    };
+  };
 }
