@@ -172,10 +172,9 @@
           }
           "org.kde.plasma.marginsseparator"
           {
-            systemTray.items = {
+            systemTray.items = let
               shown = [
                 "applications:ivpn-ui.desktop"
-                "org.kde.plasma.devicenotifier"
                 "org.kde.plasma.brightness"
                 "org.kde.plasma.volume"
                 "org.kde.plasma.bluetooth"
@@ -183,13 +182,20 @@
                 "org.kde.plasma.battery"
               ];
               hidden = [
-                "org.kde.plasma.addons.katesessions"
-                "org.kde.plasma.clipboard"
-                "org.kde.plasma.keyboardlayout"
-                "org.kde.plasma.weather"
+                "org.kde.kscreen"
+                "org.kde.plasma.printmanager"
                 "org.kde.plasma.manage-inputmethod"
-                "org.kde.plasma.mediacontroller"
               ];
+              others = [
+                "org.kde.kdeconnect"
+                "org.kde.plasma.notifications"
+                "org.kde.plasma.devicenotifier"
+                "org.kde.plasma.cameraindicator"
+              ];
+            in {
+              inherit shown;
+              inherit hidden;
+              extra = shown ++ hidden ++ others;
             };
           }
           "org.kde.plasma.digitalclock"
