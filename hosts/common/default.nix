@@ -54,6 +54,7 @@
     tree
     curl
     git
+    ripgrep
   ];
 
   hardware.steam-hardware.enable = true; # Not just for Steam Deck, enables controllers.
