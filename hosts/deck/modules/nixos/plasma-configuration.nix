@@ -175,6 +175,8 @@
             systemTray.items = {
               shown = [
                 "applications:ivpn-ui.desktop"
+                "org.kde.plasma.devicenotifier"
+                "org.kde.plasma.brightness"
                 "org.kde.plasma.volume"
                 "org.kde.plasma.bluetooth"
                 "org.kde.plasma.networkmanagement"
@@ -182,12 +184,10 @@
               ];
               hidden = [
                 "org.kde.plasma.addons.katesessions"
-                "org.kde.plasma.brightness"
                 "org.kde.plasma.clipboard"
                 "org.kde.plasma.keyboardlayout"
                 "org.kde.plasma.weather"
                 "org.kde.plasma.manage-inputmethod"
-                "org.kde.plasma.devicenotifier"
                 "org.kde.plasma.mediacontroller"
               ];
             };
