@@ -25,7 +25,6 @@
   ];
 
   services.flatpak.enable = true;
-  hardware.steam-hardware.enable = true; # Not just for Steam Deck, enables controllers.
 
   environment.variables.EDITOR = "vim";
 }
