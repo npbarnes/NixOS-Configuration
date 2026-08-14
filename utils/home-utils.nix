@@ -7,7 +7,11 @@
 let
   configDir = "${config.home.homeDirectory}/NixOS-Configuration"; # Assumed location of the flake
 
-  _dirToHomeFile =
+  listFilesRecursiveIfExists = path: if builtins.pathExists path
+    then lib.filesystem.listFilesRecursive path
+    else [];
+
+  _dirToHomeFileIfExists =
     modifier: dotfilesStorePath:
     let
       # Relative path of the dotfiles directory from the flake root
@@ -26,12 +30,12 @@ let
             source = modifier "${configDir}/${dotfilesRelDir}/${relPath}";
           };
         }
-      ) (lib.filesystem.listFilesRecursive dotfilesStorePath)
+      ) (listFilesRecursiveIfExists dotfilesStorePath)
     );
 in
 {
   _module.args.myUtils = {
-    dirToHomeFileAttr = _dirToHomeFile (x: x);
-    dirToHomeFileAttrOutOfStore = _dirToHomeFile (config.lib.file.mkOutOfStoreSymlink);
+    dirToHomeFileAttrIfExists = _dirToHomeFileIfExists (x: x);
+    dirToHomeFileAttrOutOfStoreIfExists = _dirToHomeFileIfExists (config.lib.file.mkOutOfStoreSymlink);
   };
 }
