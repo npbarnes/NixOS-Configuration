@@ -184,13 +184,13 @@
               hidden = [
                 "org.kde.kscreen"
                 "org.kde.plasma.printmanager"
-                "org.kde.plasma.manage-inputmethod"
               ];
               others = [
                 "org.kde.kdeconnect"
                 "org.kde.plasma.notifications"
                 "org.kde.plasma.devicenotifier"
                 "org.kde.plasma.cameraindicator"
+                "org.kde.plasma.manage-inputmethod"
               ];
             in {
               inherit shown;
