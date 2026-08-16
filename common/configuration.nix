@@ -24,7 +24,5 @@
     ripgrep
   ];
 
-  services.flatpak.enable = true;
-
   environment.variables.EDITOR = "vim";
 }
