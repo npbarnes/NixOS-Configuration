@@ -50,7 +50,8 @@
     "Mersenne",
     "Tsang",
     "unimodal",
-    "Xoshiro"
+    "Xoshiro",
+    "thresholding"
   ],
   "terminal.integrated.initialHint": false,
   "nix.formatterPath": "nixfmt",
