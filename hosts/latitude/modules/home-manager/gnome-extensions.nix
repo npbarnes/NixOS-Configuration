@@ -7,7 +7,7 @@
   ];
 
   dconf.settings = {
-    "org/gnome/shell/power-off-options" = {
+    "org/gnome/shell/extensions/power-off-options" = {
       show-hibernate = true;
       show-suspend-then-hibernate = true;
       show-hybrid-sleep = true;
