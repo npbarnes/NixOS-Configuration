@@ -4,6 +4,7 @@
     pkgs.gnomeExtensions.power-off-options
     pkgs.gnomeExtensions.appindicator
     pkgs.gnomeExtensions.caffeine
+    pkgs.gnomeExtensions.just-perfection
   ];
 
   dconf.settings = {
@@ -11,6 +12,12 @@
       show-hibernate = true;
       show-suspend-then-hibernate = true;
       show-hybrid-sleep = true;
+    };
+
+    "org/gnome/shell/extensions/just-perfection" = {
+      quick-settings-night-light = false;
+      quick-settings-dark-mode = false;
+      support-notifier-type = 0;
     };
   };
 }
