@@ -1,6 +1,11 @@
-{ inputs, ... }: {
+{ pkgs, inputs, ... }: {
   imports = [
     inputs.jovian.nixosModules.default
+  ];
+
+  environment.systemPackages = [
+    pkgs.steamdeck-firmware
+    pkgs.jupiter-dock-updater-bin
   ];
 
   # Enable Steam Deck specific patches
