@@ -11,7 +11,7 @@
     "org/gnome/shell/extensions/power-off-options" = {
       show-hibernate = true;
       show-suspend-then-hibernate = true;
-      show-hybrid-sleep = true;
+      show-settings = false;
     };
 
     "org/gnome/shell/extensions/just-perfection" = {
