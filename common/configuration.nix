@@ -24,5 +24,7 @@
     ripgrep
   ];
 
+  services.fwupd.enable = true;
+
   environment.variables.EDITOR = "vim";
 }
