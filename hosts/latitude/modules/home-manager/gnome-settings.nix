@@ -1,5 +1,13 @@
 { lib, ... }: {
   dconf.settings = {
+    "org/gnome/shell" = {
+      favorite-apps = [
+        "org.gnome.Nautilus.desktop"
+        "firefox.desktop"
+        "org.gnome.Console.desktop"
+        "steam.desktop"
+      ];
+    };
     "org/gnome/Console" = {
       audible-bell = false;
       ignore-scrollback-limit = true;
