@@ -4,7 +4,7 @@
   home.homeDirectory = "/home/npbarnes";
 
   home.packages = [
-    pkgs.texlive.combined.scheme-full
+    pkgs.texliveFull
     pkgs.texstudio
     pkgs.onlyoffice-desktopeditors
     pkgs.heroic
