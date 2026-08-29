@@ -15,6 +15,13 @@
     "org/gnome/settings-daemon/plugins/power" = {
       power-button-action = "hibernate";
     };
+    "org/gnome/mutter" = {
+      center-new-windows = false;
+    };
+    "org/gnome/desktop/wm/preferences" = {
+      button-layout = "appmenu:minimize,maximize,close";
+      focus-mode = "sloppy";
+    };
     "org/gnome/desktop/interface" = {
       show-battery-percentage = true;
     };
