@@ -4,6 +4,11 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
 
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v1.1.0"; # Check for latest!
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-hardware = {
       url = "github:NixOS/nixos-hardware";
       inputs.nixpkgs.follows = "nixpkgs";
