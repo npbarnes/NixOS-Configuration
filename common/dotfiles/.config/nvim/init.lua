@@ -134,10 +134,10 @@ autocmd({"BufRead", "BufWrite"}, {
 })
 
 -- Keep cursor at the top for git commits
-autocmd("FileType", {
+autocmd("BufEnter", {
   group = augroup,
-  pattern = "gitcommit",
+  pattern = "COMMIT_EDITMSG",
   callback = function()
-    vim.fn.setpos('.', {0, 1, 1, 0})
+    pcall(vim.api.nvim_win_set_cursor, 0, {1, 0})
   end,
 })
