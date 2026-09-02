@@ -15,17 +15,21 @@
   networking.networkmanager.enable = true;
 
   environment.systemPackages = with pkgs; [
-    neovim
-    wl-clipboard # Allows neovim to use the system clipboard (Wayland)
     wget
     htop
     tree
     curl
     git
     ripgrep
+    wl-clipboard # Allows neovim to use the system clipboard (Wayland)
   ];
 
-  services.fwupd.enable = true;
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+  };
 
-  environment.variables.EDITOR = "nvim";
+  services.fwupd.enable = true;
 }
