@@ -2,6 +2,8 @@
 [[ $- != *i* ]] && return
 
 ## Common options
+# Using neovim, but used to vim
+alias vim=nvim
 
 # Long persistent history
 export HISTFILESIZE=100000

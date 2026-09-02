@@ -8,6 +8,7 @@
       ".envrc"
     ];
     settings = {
+      core.editor = "nvim";
       user.name = "Nathan Barnes";
       user.email = "nathanpaulbarnes@gmail.com";
       column.ui = "auto";
