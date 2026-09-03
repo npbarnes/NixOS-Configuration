@@ -138,6 +138,9 @@ autocmd("BufEnter", {
   group = augroup,
   pattern = "COMMIT_EDITMSG",
   callback = function()
-    pcall(vim.api.nvim_win_set_cursor, 0, {1, 0})
+    local ok, result = pcall(vim.api.nvim_win_set_cursor, 0, {1, 0})
+    if not ok then
+      vim.notify("Failed to set win cursor to the top (commit message): " .. tostring(result), vim.log.levels.ERROR)
+    end
   end,
 })
