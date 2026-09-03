@@ -14,6 +14,7 @@
     pkgs.vlc
     pkgs.qbittorrent
     pkgs.discord
+    pkgs.bitwarden-desktop
   ];
 
   home.sessionVariables = { };
