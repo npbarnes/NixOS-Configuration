@@ -75,7 +75,7 @@
         };
         "{eceab40b-230a-4560-98ed-185ad010633f}" = {
           # NixOS Packages Search Engine
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/4160440/nixos_packages_search_engine-1.0.xpi";
+          install_url = "https://addons.mozilla.org/firefox/downloads/file/4160440/nixos_packages_search_engine/latest.xpi";
           installation_mode = "normal_installed";
         };
       }; # end ExtensionSettings
