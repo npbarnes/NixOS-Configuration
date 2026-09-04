@@ -14,12 +14,9 @@
     pkgs.vlc
     pkgs.qbittorrent
     pkgs.discord
-    pkgs.bitwarden-desktop
   ];
 
   home.sessionVariables = { };
-
-  services.ssh-agent.enable = true;
 
   programs.home-manager.enable = true;
 }
