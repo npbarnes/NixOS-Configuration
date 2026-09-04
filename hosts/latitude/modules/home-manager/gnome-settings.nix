@@ -14,6 +14,7 @@
     };
     "org/gnome/settings-daemon/plugins/power" = {
       power-button-action = "hibernate";
+      sleep-inactive-ac-timeout = 1800;
     };
     "org/gnome/mutter" = {
       center-new-windows = false;
