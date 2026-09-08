@@ -22,6 +22,13 @@
         fish_add_path -g ~/.juliaup/bin
       end
     '';
+
+    functions = {
+      fish_user_key_bindings = ''
+        bind \e\[A history-prefix-search-backward
+        bind \e\[B history-prefix-search-forward
+      '';
+    };
   };
 
   # fzf, bat, and fd are required for fishPlugins.fzf-fish
@@ -32,7 +39,6 @@
     pkgs.fd
 
     pkgs.fishPlugins.tide
-    pkgs.fishPlugins.fzf-fish
     pkgs.fishPlugins.z
     pkgs.fishPlugins.autopair
   ];
