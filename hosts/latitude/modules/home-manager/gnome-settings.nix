@@ -25,6 +25,7 @@
     };
     "org/gnome/desktop/interface" = {
       show-battery-percentage = true;
+      clock-show-weekday = true;
     };
     "org/gnome/desktop/screensaver" = {
       lock-delay = lib.hm.gvariant.mkUint32 300; # seconds
