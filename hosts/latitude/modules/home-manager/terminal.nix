@@ -1,4 +1,13 @@
 { pkgs, ... }: {
+  programs.alacritty = {
+    enable = true;
+    settings = {
+      terminal.shell = "${pkgs.fish}/bin/fish";
+      scrolling.history = 100000;
+      mouse.hide_when_typing = true;
+    };
+  };
+
   programs.gnome-terminal = {
     enable = true;
     profile."27a967ce-38c1-40c3-a6ca-37038ca7be40" = {
