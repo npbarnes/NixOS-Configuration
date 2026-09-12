@@ -7,6 +7,11 @@
         force = true; # force is required. See home-manager documentation.
         default = "ddg"; # DuckDuckGo
       };
+      settings = {
+        "browser.tabs.hoverPreview.showThumbnails" = false;
+        "browser.tabs.hoverPreview.enabled" = false;
+        "browser.tabs.cardPreview.enabled" = false;
+      };
     };
     policies = {
       Cookies = {
