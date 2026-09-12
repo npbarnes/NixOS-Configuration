@@ -66,6 +66,7 @@ opt.foldnestmax = 1
 opt.foldlevelstart = 99
 opt.errorbells = false      -- No error bells
 opt.hlsearch = false        -- Turn off highlight search
+opt.mousescroll = "ver:1,hor:2" -- Slow down scrolling
 
 -- ==========================================================================
 -- KEYMAPS (Replaces `map`, `nmap`, `nnoremap`, etc.)
