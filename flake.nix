@@ -34,6 +34,11 @@
       url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    easyeffects-presets = {
+      url = "github:JackHack96/EasyEffects-Presets";
+      flake = false;
+    };
   };
 
   outputs =
