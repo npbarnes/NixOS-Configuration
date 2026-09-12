@@ -24,7 +24,6 @@ vim.opt.rtp:prepend(lazypath)
 -- Configure Airline variables BEFORE loading the plugin
 vim.g.airline_powerline_fonts = 1
 vim.g.airline_extensions = {'tabline'}
--- In Lua, variables with '#' must be set using bracket syntax
 vim.g['airline#extensions#tabline#enabled'] = 1
 vim.g['airline#extensions#tabline#formatter'] = 'unique_tail_improved'
 
@@ -37,11 +36,8 @@ require("lazy").setup({
 })
 
 -- ==========================================================================
--- OPTIONS (Replaces `set ...`)
+-- OPTIONS
 -- ==========================================================================
--- Note: 'nocompatible', 'syntax on', and 'filetype plugin indent on'
--- are native Neovim defaults, so we don't need to specify them anymore.
-
 local opt = vim.opt
 
 opt.clipboard = "unnamedplus" -- Use system clipboard
@@ -69,12 +65,12 @@ opt.hlsearch = false        -- Turn off highlight search
 opt.mousescroll = "ver:1,hor:2" -- Slow down scrolling
 
 -- ==========================================================================
--- KEYMAPS (Replaces `map`, `nmap`, `nnoremap`, etc.)
+-- KEYMAPS
 -- ==========================================================================
 local keymap = vim.keymap.set
 local default_opts = { noremap = true, silent = true }
 
--- Easy edit for init.lua (replacing $MYVIMRC)
+-- Easy edit for init.lua
 keymap('n', '<leader>ev', ':e $MYVIMRC<cr>', default_opts)
 
 -- Move cursor by screen lines, not hard lines
@@ -105,7 +101,6 @@ keymap('n', '<Leader>f', ':bn<CR>', default_opts)
 keymap('n', '<Leader>g', ':e#<CR>', default_opts)
 keymap('n', '<Leader>z', ':bd<CR>', default_opts)
 
--- We can use a Lua loop to generate the 1-9 BufPos bindings automatically!
 for i = 1, 9 do
   keymap('n', '<Leader>' .. i, ':call BufPos_ActivateBuffer(' .. i .. ')<CR>', default_opts)
 end
