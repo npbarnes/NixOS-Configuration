@@ -32,4 +32,6 @@
   };
 
   services.fwupd.enable = true;
+
+  services.locate.enable = true;
 }
