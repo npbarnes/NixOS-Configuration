@@ -4,7 +4,7 @@
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
         "firefox.desktop"
-        "org.gnome.Terminal.desktop"
+        "Alacritty.desktop"
         "steam.desktop"
       ];
     };
