@@ -61,6 +61,8 @@ if [ -z "${CONTAINER_ID+x}" ]; then
     return
 fi
 ## Distrobox options
+export EDITOR="vim"
+
 alias ls="ls --color=auto"
 
 txtgrn='\e[1;32m' # Green
