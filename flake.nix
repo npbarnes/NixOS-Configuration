@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     lanzaboote = {
-      url = "github:nix-community/lanzaboote/v1.1.0"; # Check for latest!
+      url = "github:nix-community/lanzaboote/v1.2.0"; # Check for latest!
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
