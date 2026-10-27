@@ -4,8 +4,8 @@
   ];
 
   environment.systemPackages = [
-    pkgs.steamdeck-firmware
-    pkgs.jupiter-dock-updater-bin
+    pkgs.jovianPackages.steamdeck-firmware
+    pkgs.jovianPackages.jupiter-dock-updater-bin
   ];
 
   # Enable Steam Deck specific patches
