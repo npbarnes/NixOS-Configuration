@@ -56,6 +56,24 @@
           Value = false;
           Status = "user";
         };
+
+        # Disable AI features
+        "browser.ml.enable" = {
+          Value = false;
+          Status = "user";
+        };
+        "browser.ml.chat.enabled" = {
+          Value = false;
+          Status = "user";
+        };
+        "browser.ml.chat.shortcuts" = {
+          Value = false;
+          Status = "user";
+        };
+        "browser.ml.chat.sidebar" = {
+          Value = false;
+          Status = "user";
+        };
       };
       SearchSuggestEnabled = true;
       ExtensionSettings = {
