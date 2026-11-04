@@ -184,6 +184,7 @@
               hidden = [
                 "org.kde.kscreen"
                 "org.kde.plasma.printmanager"
+                "org.kde.contacts"
               ];
               others = [
                 "org.kde.kdeconnect"
