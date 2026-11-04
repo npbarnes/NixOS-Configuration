@@ -1,4 +1,9 @@
 {
-  programs.solaar.enable = true;
-  programs.solaar.userService.enable = true;
+  programs.solaar = {
+    enable = true;
+    userService = {
+      enable = true;
+      window = "only";
+    };
+  };
 }
